@@ -1,0 +1,39 @@
+02. HTTP Verbs
+--------------
+
+
+Web Server
+----------
+
+A piece of software designed to accept incoming web requests.
+
+What do we send?
+When you visit http://www.google.com you send the followwing:
+
+
+GET / HTTP/1.1
+Host: www.google.com
+
+verb: GET
+path: /
+protocol: HTTP
+
+The server can answer:
+- It may give you an error, if / is nof found
+-It may give you an error, if HTTP is not supported
+-It may give you an error, if the server is unavailable
+-It may give you HTML code back (which is what it normally does)
+-It may give you some text back
+-it may give you nothing
+
+POST,DELETE,PUT,OPTIONS,HEAD,... user actions
+
+verb	Meaning				Example
+----	-------				------
+GET	Retrieve something		GET /item/1
+POST	Receive data, and use it	POST /item {'name':'chair', 'price': 7.99}
+PUT	Make sure somthing is thre	PUT /item {'name':'chair', 'price': 7.99}
+DELETE	Remove shomething		DELETE /item/1
+
+
+

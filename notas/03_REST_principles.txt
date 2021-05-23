@@ -1,0 +1,37 @@
+Server normally returns HTML,but can return another things.
+
+REST API
+It's a way of thingking about how a web server responds to your requests.
+It doesn't resond with just data
+It responds with resources
+
+RESOURCES
+Similar to object-oriented programming
+Think of the server as having resources, and each is able to interact with 
+the pertinent request.
+
+GET /item/chair
+POST /item/chair (with extra data)
+PUT /item/chair (WITH EXTRA DATA)
+DELETE /item/chair
+
+GET /items  <-Retrieves multiple items.
+
+STATELESS
+Another key feature is that REST is supposed to be stateless.
+This means one request cannot depend on any other requests.
+The server only knows about the current request, and not any previoius request.
+
+Example:
+POST /item/chair creates an item
+
+- The server does not know the item now exists but is it in the DDBB.
+
+GET /item/chair then goes to the DDBB and checks to see if the item is there.
+
+To get an item you do not need to have created an item before -- the item could be
+in the DDBB from previously.
+
+The web application must send enough data to identify the user in every request, or
+else the server won't associate the request with the user.
+
